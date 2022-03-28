@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span><mat-icon>groups</mat-icon> Payroll Management</span>
+    <div class="spacer"></div>
+      
+</mat-toolbar>
+<button onclick="history.back()"><h3>Go Back</h3></button>
+&nbsp;
+<h1 style="font-size: 50px; font-style: oblique; font-weight: bold; text-align: center;">View Leave</h1>
+&nbsp;
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> From_date</th>
+            <th> To_date </th>
+            <th> Leave_Type</th>
+            <th> Reason </th>
+            <th> Status </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let leave of leave" >
+            <td> {{ leave.id }} </td>
+            <td> {{ leave.from_date }} </td>
+            <td> {{ leave.to_date }} </td>
+            <td> {{ leave.leave_type }} </td>
+            <td> {{ leave.reason }} </td>
+            <td> {{ leave.status }} </td>
+            <td>
+               
+                <button (click) = "leaveDetails(leave.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

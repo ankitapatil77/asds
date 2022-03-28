@@ -1,0 +1,51 @@
+<body>
+  <button onclick="history.back()"><h3>Go Back</h3></button>
+  <a class="btn btn-outline-success" mat-button routerLink="/addleaves">
+    <h2 style="color: rgb(53, 52, 52);">Work Schedule details</h2>
+</a>
+<div class="container pt-5">
+    <div class="row justify-content-sm-center pt-5">
+        <div class="col-sm-6 shadow round pb-3">
+        
+          <h1 class="text-center pt-3 text-secondary">Add Schedule</h1>
+          <p>
+            &nbsp;
+
+          </p>
+            <form [formGroup]="exform">
+                <div class="form-group">
+                    <label class="col-form-label"><h2>Employee_Name: </h2></label>
+                    <input formControlName="name" type="text" class="form-control" id = "name" [(ngModel)] = "schedule.emp_name">
+                    <small *ngIf="name?.invalid && name?.touched" class="text-danger">Name is Required</small>
+                  </div>
+                  &nbsp;
+                <div class="form-group">
+                  <label class="col-form-label"><h2>Date: </h2></label>
+                  <input formControlName="date" type="date" class="form-control" id = "date" [(ngModel)] = "schedule.workdate">
+                  <small *ngIf="date?.invalid && date?.touched" class="text-danger">Date is Required</small>
+                </div>
+                &nbsp;
+                <div class="form-group">
+                  <label class="col-form-label"><h2>Time: </h2></label>
+                  <input formControlName="time" type="time" class="form-control" id = "time" [(ngModel)] = "schedule.worktime">
+                  <small *ngIf="time?.invalid && time?.touched" class="text-danger">Time is Required</small>
+                </div>
+                &nbsp;
+                <div class="form-group">
+                    <label class="col-form-label"><h2>Shift: </h2></label>
+                    <input formControlName="shift" type="text" class="form-control" id = "shift" [(ngModel)] = "schedule.workshift">
+                    <small *ngIf="shift?.invalid && shift?.touched" class="text-danger">Net_Pay is Required</small>
+                  </div>
+                  &nbsp;
+                  <div class="form-group">
+                    <label class="col-form-label"><h2>Work_Status: </h2></label>
+                    <input formControlName="work" type="text" class="form-control" id = "work" [(ngModel)] = "schedule.workstatus">
+                    <small *ngIf="work?.invalid && work?.touched" class="text-danger">Work is Required</small>
+                  </div>
+                 
+                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary"><h3>Add</h3></button>
+              </form>
+            </div>
+    </div>
+  </div>
+</body>

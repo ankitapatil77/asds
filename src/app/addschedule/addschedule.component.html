@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span><mat-icon>groups</mat-icon> Payroll Management</span>
+    <div class="spacer"></div>
+       
+</mat-toolbar>
+
+<button onclick="history.back()"><h3>Go Back</h3></button>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> Employee_Name</th>
+            <th> Date</th>
+            <th> Time</th>  
+            <th> Shift</th>
+            <th> Work_Assigned </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let schedule of schedule" >
+            <td> {{ schedule.id }} </td>
+            <td> {{ schedule.emp_name }} </td>
+            <td> {{ schedule.workdate}} </td>
+            <td> {{ schedule.worktime }} </td>
+            <td> {{ schedule.workshift}} </td>
+            <td> {{ schedule.workstatus}} </td>
+            <td>
+               
+                <button (click) = "updateSchedule(schedule.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteSchedule(schedule.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+         
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,56 @@
+<body>
+    <button onclick="history.back()"><h3>Go Back</h3></button>
+
+<div class="col-md-6 offset-md-3">
+    &nbsp;
+    <h3 style="font-size: 50px; font-style: oblique; font-weight: bold; text-align: center;"> Update Employee </h3>
+    &nbsp;
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label><h2> Employee_Name </h2></label>
+            <input type="text" class ="form-control" id = "emp_name"
+                [(ngModel)] = "employee.emp_name" name = "emp_name">
+        </div>
+    &nbsp;
+        <div class="form-group">
+            <label><h2> Date_of_Joining </h2></label>
+            <input type="date" class ="form-control" id = "date_of_joining"
+                [(ngModel)] = "employee.date_of_joining" name = "date_of_joining" aria-label="Disabled input example" disabled>
+        </div>
+    &nbsp;
+        <div class="form-group">
+            <label><h2> Gender </h2></label>
+            <input type="text" class ="form-control" id = "gender"
+                [(ngModel)] = "employee.gender" name = "gender" aria-label="Disabled input example" disabled>
+        </div>
+        &nbsp;
+        <div class="form-group">
+            <label><h2> Age </h2></label>
+            <input type="number" class ="form-control" id = "age"
+                [(ngModel)] = "employee.age" name = "age">
+        </div>
+        &nbsp;
+        <div class="form-group">
+            <label><h2>Designation </h2></label>
+            <input type="text" class ="form-control" id = "designation"
+                [(ngModel)] = "employee.designation" name = "designation">
+        </div>
+&nbsp;
+        <div class="form-group">
+            <label><h2> Email </h2></label>
+            <input type="email" class ="form-control" id = "email"
+                [(ngModel)] = "employee.email" name = "email">
+        </div>
+&nbsp;
+        <div class="form-group">
+            <label><h2>Password </h2></label>
+            <input type="text" class ="form-control" id = "password"
+                [(ngModel)] = "employee.password" name = "password">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Update</button>
+    
+    </form>
+    </div> 
+</body>

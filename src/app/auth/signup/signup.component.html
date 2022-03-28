@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../../../assets/login_img.svg" height="100%" width="100%">
+        </div>
+        <div class="col-md-4 mt-3 mb-2">
+            <h3 class="text-success text-center"><b><h1 style="font-size:50px;">Welcome to Sign up Page </h1></b></h3>
+
+            <form action="" class="mt-5 p-5">
+                <h1 class="text-primary mb-3">Sign up </h1>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="name" [(ngModel)]="name">
+                    <label for="floatingInput"><h2>Full name </h2></label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username" [(ngModel)]="username">
+                    <label for="floatingInput"> <h2>Email address </h2></label>
+                </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="password">
+                    <label for="floatingPassword"> <h2>Password </h2></label>
+                  </div>
+                  
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-success me-md-2" type="button" (click)="signup()" ><h2>Register </h2></button>
+                  </div>
+
+                  <a routerLink="/login" class="text-primary" style="text-decoration: none;"><h2>Log In  </h2></a>
+            </form>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>

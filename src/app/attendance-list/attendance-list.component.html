@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span><mat-icon>groups</mat-icon> Payroll Management</span>
+    <div class="spacer"></div>
+       <a mat-raised-button routerLink="create-attendance">AddAttendance</a>
+</mat-toolbar>
+<button onclick="history.back()"><h3>Go Back</h3></button>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> Employee_Name</th>
+            <th> Email</th>
+            <th> Date</th>  
+            <th> Status</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let attendance of attendances" >
+            <td> {{ attendance.id }} </td>
+            <td> {{ attendance.emp_name }} </td>
+            <td> {{ attendance.email}} </td>
+            <td> {{ attendance.date }} </td>
+            <td> {{ attendance.status}} </td>
+            
+            <td>
+               
+                <button (click) = "updateAttendance(attendance.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteAttendance(attendance.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "attendanceDetails(attendance.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

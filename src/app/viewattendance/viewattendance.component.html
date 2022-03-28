@@ -1,0 +1,37 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span><mat-icon>groups</mat-icon> Payroll Management</span>
+    <div class="spacer"></div>
+
+</mat-toolbar>
+<button onclick="history.back()"><h3>Go Back</h3></button>
+&nbsp;
+<h1 style="font-size: 50px; font-style: oblique; font-weight: bold; text-align: center;">View Attendance</h1>
+&nbsp;
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th> Employee_Name</th>
+            <th> Email</th>
+            <th> Date</th>  
+            <th> Status</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of attendance" >
+            <td> {{ employee.id }} </td>
+            <td> {{ employee.emp_name }} </td>
+            <td> {{ employee.email}} </td>
+            <td> {{ employee.date }} </td>
+            <td> {{ employee.status}} </td>
+            
+            <td>
+               
+                
+                <button (click) = "attendanceDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

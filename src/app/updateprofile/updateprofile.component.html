@@ -1,0 +1,42 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+
+    <span><mat-icon>groups</mat-icon> Payroll Management</span>
+    <div class="spacer"></div>
+</mat-toolbar>
+
+<button onclick="history.back()"><h3>Go Back</h3></button>
+&nbsp;
+<h1 style="font-size: 50px; font-style: oblique; font-weight: bold; text-align: center;"> Employee List</h1>
+&nbsp;
+<table class = "table table-striped">
+    
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th> Employee_Name</th>
+            <th> Date_of_Joining </th>
+            <th> Gender</th>
+            <th> Age</th>
+            <th> Designation</th>
+            <th> Email</th>
+            <th> Password</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employee" >
+            <td> {{ employee.id }} </td>
+            <td> {{ employee.emp_name }} </td>
+            <td> {{ employee.date_of_joining }} </td>
+            <td> {{ employee.gender}} </td>
+            <td> {{ employee.age}} </td>
+            <td> {{ employee.designation}} </td>
+            <td> {{ employee.email}} </td>
+            <td> {{ employee.password}} </td>
+            <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+               
+            </td>
+        </tr>
+    </tbody>
+</table>

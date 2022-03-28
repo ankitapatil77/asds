@@ -1,0 +1,53 @@
+
+<body>
+  <button onclick="history.back()"><h3>Go Back</h3></button>
+  <a class="btn btn-outline-success" mat-button routerLink="/employee-list">
+    <h2 style="color: rgb(53, 52, 52);">Employee details</h2>
+</a>
+
+<div class="container pt-5">
+  <div class="row justify-content-sm-center pt-5">
+      <div class="col-sm-6 shadow round pb-3">
+        <h1 class="text-center pt-3 text-secondary">Add Employee</h1>
+          <form [formGroup]="exform">
+              <div class="form-group">
+                <label class="col-form-label"><h2>Employee_Name: </h2></label>
+                <input formControlName="name" type="text" class="form-control" id = "emp_name" [(ngModel)] = "employee.emp_name">
+                <small *ngIf="name?.invalid && name?.touched" class="text-danger">Name is Required</small> 
+              </div>
+              <div class="form-group">
+                <label class="col-form-label"> <h2>Date-of-Joining: </h2></label>
+                <input formControlName="doj" type="date" class="form-control" id = "date_of_joining" [(ngModel)] = "employee.date_of_joining">
+                <small *ngIf="doj?.invalid && doj?.touched" class="text-danger">Date is Required</small>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label"><h2>Gender: </h2></label>
+                <input formControlName="gender" type="text" class="form-control" id = "gender" [(ngModel)] = "employee.gender">
+                <small *ngIf="gender?.invalid && gender?.touched" class="text-danger">Gender is Required</small>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label"><h2>Age: </h2></label>
+                <input formControlName="age" type="age" class="form-control" id = "age" [(ngModel)] = "employee.age">
+                <small *ngIf="age?.invalid && age?.touched" class="text-danger">Age is Required</small>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label"><h2>Designation: </h2></label>
+                <input formControlName="designation" type="text" class="form-control" id = "designation" [(ngModel)] = "employee.designation">
+                <small *ngIf="designation?.invalid && designation?.touched" class="text-danger">Designation is Required</small> 
+              </div>
+              <div class="form-group">
+                <label class="col-form-label"><h2>Email: </h2></label>
+                <input formControlName="email" type="age" class="form-control" id = "email" [(ngModel)] = "employee.email">
+                <small *ngIf="email?.invalid && email?.touched" class="text-danger">Email is Required</small>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label"><h2>Password:</h2></label>
+                <input formControlName="password" type="password" class="form-control" id = "password" [(ngModel)] = "employee.password">
+                <small *ngIf="password?.invalid && password?.touched" class="text-danger">Password is Required</small>
+              </div>
+              <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">Add</button>
+            </form>
+          </div>
+  </div>
+</div>
+</body>

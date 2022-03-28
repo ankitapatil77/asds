@@ -1,0 +1,44 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Employee Dashboard</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="updateprofile"> <h2>View-Employee   </h2></a>
+      <a mat-list-item href="viewattendance"><h2>View-Attendance </h2></a>
+      <a mat-list-item href="viewschedule">  <h2>View-Schedule   </h2></a>
+      <a mat-list-item href="viewsalary">    <h2>View-Salary     </h2></a>
+      <a mat-list-item href="viewleave">     <h2>View-Leave      </h2></a>
+      
+      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+      </button>
+      <span><mat-icon>groups</mat-icon> &nbsp; Employee Payroll System</span>
+      <div class="spacer"></div>
+      <button class="btn btn-outline-success" (click)="logout()">Logout</button>
+    </mat-toolbar>
+    &nbsp;
+        <div class="imagecontainer">
+		
+          <img src="https://wallpaperaccess.com/full/4321838.jpg" alt="Snow" style="width:150%;">
+          <div class="caption center">
+      
+          <div class="banner-content">
+              <h1 >Welcome to Employee Dashboard</h1>
+              
+            </div>
+        </div>
+      
+        </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

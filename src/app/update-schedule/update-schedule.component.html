@@ -1,0 +1,47 @@
+<body>
+    <button onclick="history.back()"><h3>Go Back</h3></button>
+<div class="col-md-6 offset-md-3">
+    &nbsp;
+    <h1 style="font-size: 50px; font-style: oblique; font-weight: bold; text-align: center;"> Update Schedule </h1>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label><h2> Employee_Name </h2></label>
+            <input type="text" class ="form-control" id = "emp_name"
+                [(ngModel)] = "schedule.emp_name" name = "emp_name">
+        </div>
+        &nbsp;
+        <div class="form-group">
+            <label><h2> Date </h2></label>
+            <input type="date" class ="form-control" id = "date"
+                [(ngModel)] = "schedule.workdate" name = "date">
+        </div>
+        &nbsp;
+        <div class="form-group">
+            <label><h2> Time </h2></label>
+            <input type="time" class ="form-control" id = "time"
+                [(ngModel)] = "schedule.worktime" name = "time">
+        </div>
+    
+        &nbsp;
+
+        <div class="form-group">
+            <label><h2> Shift </h2></label>
+            <input type="text" class ="form-control" id = "shift"
+                [(ngModel)] = "schedule.workshift" name = "shift">
+        </div>
+
+        &nbsp;
+        <div class="form-group">
+            <label><h2> workstatus </h2></label>
+            <input type="text" class ="form-control" id = "work_assigned"
+                [(ngModel)] = "schedule.workstatus" name = "work_assigned">
+        </div>
+
+        &nbsp;
+    
+        <button class = "btn btn-success" type ="submit"><h3>Submit </h3></button>
+    
+    </form>
+    </div>
+</body>

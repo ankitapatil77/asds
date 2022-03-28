@@ -1,0 +1,48 @@
+<body>
+<button onclick="history.back()"><h3>Go Back</h3></button>
+<div class="col-md-6 offset-md-3">
+    &nbsp;
+    <h1 style="font-size: 50px; font-style: oblique; font-weight: bold; text-align: center;"> Update Salary </h1>
+    &nbsp;
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label><h2> Employee_Name </h2></label>
+            <input type="text" class ="form-control" id = "emp_name"
+                [(ngModel)] = "salary.emp_name" name = "emp_name">
+        </div>
+        &nbsp;
+        <div class="form-group">
+            <label><h2> Basic_Pay</h2></label>
+            <input type="number" class ="form-control" id = "basic_pay"
+                [(ngModel)] = "salary.basic_pay" name = "basic_pay">
+        </div>
+        &nbsp;
+        <div class="form-group">
+            <label><h2> Deductions</h2></label>
+            <input type="number" class ="form-control" id = "deductions"
+                [(ngModel)] = "salary.deductions" name = "deductions">
+        </div>
+    
+        &nbsp;
+
+        <div class="form-group">
+            <label><h2> Net_Pay </h2></label>
+            <input type="number" class ="form-control" id = "net_pay"
+                [(ngModel)] = "salary.net_pay" name = "net_pay">
+        </div>
+        &nbsp;
+
+        <div class="form-group">
+            <label><h2> Month </h2></label>
+            <input type="text" class ="form-control" id = "month"
+                [(ngModel)] = "salary.month" name = "month">
+        </div>
+
+        &nbsp;
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
+</body>

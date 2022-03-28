@@ -1,0 +1,56 @@
+
+.center {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-content
+{
+  color:coral;
+  font-size: 60px;
+  width: 1000px;
+  padding: 20px;
+  
+  font-style: oblique;
+  font-weight: bold;
+  margin: 100px auto;
+}
+
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+h1{
+  text-align:center;
+  font-size: 70px;
+  text-decoration: underline;
+  font-style: oblique;
+  font-weight: bold;
+  margin: 100px auto;
+  
+}
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.spacer{
+
+  flex: 1 1 auto;
+}

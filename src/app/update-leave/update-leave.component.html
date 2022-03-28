@@ -1,0 +1,37 @@
+<button onclick="history.back()"><h3>Go Back</h3></button>
+<div class="col-md-6 offset-md-3">
+    <h1 style="font-size: 50px; font-style: oblique; font-weight: bold; text-align: center;"> Update Leave </h1>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> <h2>From_date</h2></label>
+            <input type="date" class ="form-control" id = "from_date"
+                [(ngModel)] = "leave.from_date" name = "from_date">
+        </div>
+    
+        <div class="form-group">
+            <label><h2>To_date</h2></label>
+            <input type="data" class ="form-control" id = "to_date"
+                [(ngModel)] = "leave.to_date" name = "to_date">
+        </div>
+    
+        <div class="form-group">
+            <label><h2> Leave_Type </h2></label>
+            <input type="text" class ="form-control" id = "leave_type"
+                [(ngModel)] = "leave.leave_type" name = "leave_type">
+        </div>
+        <div class="form-group">
+            <label><h2> Reason </h2></label>
+            <input type="text" class ="form-control" id = "reason"
+                [(ngModel)] = "leave.reason" name = "reason">
+        </div>
+        <div class="form-group">
+            <label><h2> Status</h2></label>
+            <input type="text" class ="form-control" id = "status"
+                [(ngModel)] = "leave.status" name = "status">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit"><h3>Submit</h3></button>
+    
+    </form>
+    </div> 
