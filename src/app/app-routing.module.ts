@@ -10,8 +10,7 @@ import { AdminsidebarComponent } from './adminsidebar/adminsidebar.component';
 import { AttendanceDetailsComponent } from './attendance-details/attendance-details.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
-import { UserDashboardComponent } from './component/user-dashboard/user-dashboard.component';
+
 import { CreateAttendanceComponent } from './create-attendance/create-attendance.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { CreateLeaveComponent } from './create-leave/create-leave.component';
@@ -23,7 +22,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeesidebarComponent } from './employeesidebar/employeesidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { LeaveDetailsComponent } from './leave-details/leave-details.component';
-import { RegistersComponent } from './registers/registers.component';
+
 import { SalaryDetailsComponent } from './salary-details/salary-details.component';
 import { ScheduleDetailsComponent } from './schedule-details/schedule-details.component';
 import { UpdateAttendanceComponent } from './update-attendance/update-attendance.component';
@@ -36,7 +35,7 @@ import { ViewattendanceComponent } from './viewattendance/viewattendance.compone
 import { ViewleaveComponent } from './viewleave/viewleave.component';
 import { ViewsalaryComponent } from './viewsalary/viewsalary.component';
 import { ViewscheduleComponent } from './viewschedule/viewschedule.component';
-
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 
@@ -81,15 +80,15 @@ const routes: Routes = [
 
 
   
-  {path:"registers", component:RegistersComponent},
-
+  
   {path:"updateprofile", component:UpdateprofileComponent},
 
   {path:"header", component:HeaderComponent},
   {path:"login", component:LoginComponent},
   {path:"signup", component:SignupComponent},
-  {path:"admindashboard", component:AdminDashboardComponent},
-  {path:"userdashboard", component:UserDashboardComponent}
+
+  {path:"userDetails", component:UserDetailsComponent}
+
 
 
   

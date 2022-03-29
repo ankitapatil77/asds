@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+      
+    <span><mat-icon>group</mat-icon> Employee Payroll System</span>
+    <div class="spacer"></div>
+    <button class="btn btn-outline-success" (click)="logout()" style="color: rgb(14, 13, 13);"><h2>Logout</h2></button>
+    
+  </mat-toolbar>
+<button onclick="history.back()"><h3>Go Back</h3></button> &nbsp;
+<h1> Users List</h1>
+&nbsp;
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th> Name</th>
+            <th> Password </th>
+            <th> Role</th>
+            <th> Token</th>
+            <th> Delete User</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of users">
+            <td> {{ employee.username }} </td>
+            <td> {{ employee.name }} </td>
+            <td> {{ employee.password }} </td>
+            <td> {{ employee.role}} </td>
+            <td> {{ employee.token}} </td>
+            <td><button (click)="deleteUser(employee.username)" class="btn btn-danger" style="margin-left: 10px"> Delete</button></td>
+        </tr>
+    </tbody>
+</table>

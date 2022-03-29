@@ -36,7 +36,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { CreateLeaveComponent } from './create-leave/create-leave.component';
 import { LeaveDetailsComponent } from './leave-details/leave-details.component';
 import { UpdateLeaveComponent } from './update-leave/update-leave.component';
-import { RegistersComponent } from './registers/registers.component';
+
 import { CreateAttendanceComponent } from './create-attendance/create-attendance.component';
 import { AttendanceDetailsComponent } from './attendance-details/attendance-details.component';
 import { UpdateAttendanceComponent } from './update-attendance/update-attendance.component';
@@ -53,8 +53,8 @@ import { ViewleaveComponent } from './viewleave/viewleave.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
-import { UserDashboardComponent } from './component/user-dashboard/user-dashboard.component';
+
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 
@@ -89,7 +89,6 @@ import { UserDashboardComponent } from './component/user-dashboard/user-dashboar
     CreateLeaveComponent,
     LeaveDetailsComponent,
     UpdateLeaveComponent,
-    RegistersComponent,
     CreateAttendanceComponent,
     AttendanceDetailsComponent,
     UpdateAttendanceComponent,
@@ -106,8 +105,8 @@ import { UserDashboardComponent } from './component/user-dashboard/user-dashboar
     HeaderComponent,
     LoginComponent,
     SignupComponent,
-    AdminDashboardComponent,
-    UserDashboardComponent,
+   
+    UserDetailsComponent,
     
     
    

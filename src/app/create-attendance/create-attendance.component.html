@@ -1,9 +1,15 @@
+
 <body>
+  <mat-toolbar color="primary">
+      
+    <span><mat-icon>group</mat-icon> Employee Payroll System</span>
+   
+  </mat-toolbar>
   <button onclick="history.back()"><h3>Go Back</h3></button>
   <a class="btn btn-outline-success" mat-button routerLink="/addattendance">
     <h2 style="color: rgb(53, 52, 52);">attendance details</h2>
 </a>
-&nbsp;
+
 <div class="container pt-5">
     <div class="row justify-content-sm-center pt-5">
         <div class="col-sm-6 shadow round pb-3">
@@ -11,7 +17,6 @@
           <p>
 
             &nbsp;
-
           </p>
             <form [formGroup]="exform">
                 <div class="form-group">
@@ -38,7 +43,7 @@
                   <small *ngIf="status?.invalid && status?.touched" class="text-danger">Email is Required</small>
                 </div>
                 &nbsp;               
-                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary"><h2>Add</h2></button>
+                <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">Add</button>
               </form>
         </div>
     </div>

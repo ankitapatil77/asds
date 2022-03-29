@@ -57,5 +57,9 @@ export class CreateAttendanceComponent implements OnInit {
   get status() {
     return this.exform.get('status');
   }
+  logout() {
+    localStorage.removeItem("token");
+    this.router.navigate(['/header']);
+  }
 
 }

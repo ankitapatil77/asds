@@ -3,5 +3,6 @@ export class User {
     password!: string;
     role!: string;
     name!: string;
+    token!:string;
   }
   

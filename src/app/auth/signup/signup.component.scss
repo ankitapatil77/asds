@@ -1,0 +1,31 @@
+body{
+    background-image: url("https://media.istockphoto.com/photos/businessman-filling-online-registration-form-picture-id1013435204?k=20&m=1013435204&s=612x612&w=0&h=i6015QWDU5gn2GE0W5tI1YvDyqgImXgQREpXMUBisoM=");
+    background-size: 98%;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(46, 46, 129);
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(65, 65, 255);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
