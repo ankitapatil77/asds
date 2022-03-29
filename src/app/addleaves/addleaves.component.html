@@ -16,6 +16,7 @@
     <thead>
         <tr>
             <th>Id</th>
+          
             <th> From_date</th>
             <th> To_date </th>
             <th> Leave_Type</th>
@@ -27,6 +28,7 @@
     <tbody>
         <tr *ngFor = "let leave of leaves" >
              <td> {{ leave.id }} </td>
+             
             <td> {{ leave.from_date }} </td>
             <td> {{ leave.to_date }} </td>
             <td> {{ leave.leave_type }} </td>

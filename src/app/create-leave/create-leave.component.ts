@@ -18,6 +18,7 @@ export class CreateLeaveComponent implements OnInit {
 
   ngOnInit(): void {
     this.exform = new FormGroup({
+     
       'fromdate': new FormControl(null, Validators.required),
       'todate': new FormControl(null, Validators.required),
       'leavetype': new FormControl(null, Validators.required),
@@ -47,6 +48,7 @@ export class CreateLeaveComponent implements OnInit {
     console.log(this.leave);
     this.saveLeave();
   }
+ 
   get fromdate() {
     return this.exform.get('fromdate');
   }
